@@ -1,13 +1,13 @@
 # Allurectl Playwright Filter
 
-## How it works
+## 📇 How it works
 
 1. Gets list of test-cases IDs from Allure TestOps launch
 2. Collects a list of test files in the specified directory
 3. Filters test files that match ID from Allure TestOps launch
 4. Copy files to the specified directory
 
-## Quick start
+## 🚀 Quick start
 
 1. Download source code
 
@@ -25,7 +25,7 @@ wget https://github.com/eftech-open/allurectl-playwright-filter/blob/master/READ
 
 3. Run test launch from Allure TestOps
 
-## Variables and args
+## ⚙️ Variables and args
 
 Variables allow you to set options for filtering tests
 
@@ -42,7 +42,7 @@ Also, launch options can be set via arguments, for instance:
 - npx ts-node ./tools/allure-filter.ts './testplan.json' './tests/e2e' '.*(test|spec)\\.ts' './tmp/allurectl-tests/'
 ```
 
-## Continuous Integration
+## 🤖 Continuous Integration
 
 ### GitLab CI
 
