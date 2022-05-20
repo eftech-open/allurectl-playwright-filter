@@ -1,0 +1,21 @@
+.husky/
+.idea/
+.tmp/
+.DStore
+.yarn/
+
+# Build
+dist/
+docs/
+lib/
+
+# Dependencies
+node_modules/
+
+# Test results
+allure-results/
+playwright-report/
+test-results/
+
+# Allurectl
+tests/selected/all

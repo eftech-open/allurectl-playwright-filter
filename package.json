@@ -1,0 +1,35 @@
+{
+    "name": "allurectl-playwright-filter",
+    "version": "1.0.0",
+    "description": "Utility to filter tests for selective run from Allure TestOps",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eftech-open/allurectl-playwright-filter.git"
+    },
+    "keywords": [
+        "allure",
+        "playwright",
+        "selective"
+    ],
+    "author": "Effective Technologies",
+    "license": "MIT",
+    "scripts": {
+        "format": "npx prettier --loglevel silent --write .",
+        "lint": "eslint --no-ignore --ext .ts .",
+        "lint:write": "eslint --ext .ts ./ --fix"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.35",
+        "@types/prettier": "2.6.1",
+        "@typescript-eslint/eslint-plugin": "^5.25.0",
+        "@typescript-eslint/parser": "^5.25.0",
+        "eslint": "^8.15.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^7.0.4",
+        "prettier": "^2.6.2",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.7.0"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "commonjs",
+        "lib": ["es2020", "dom"],
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "noImplicitThis": true,
+        "allowSyntheticDefaultImports": true,
+        "strictBindCallApply": true,
+        "types": ["node"],
+        "outDir": "dist/"
+    },
+    "exclude": ["node_modules"],
+    "compileOnSave": false
+}
