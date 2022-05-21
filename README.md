@@ -44,7 +44,7 @@ Also, launch options can be set via arguments, for instance:
 
 ## 🤖 Continuous Integration
 
-### GitLab CI
+In GitLab CI
 
 ```yaml
 stages:
@@ -55,10 +55,10 @@ tests:
   script:
     - allurectl job-run plan --job-run-id $ALLURE_JOB_RUN_ID --output-file testplan.json
     - npx ts-node ./tools/allure-filter.ts
-    - allurectl watch --project-id 4 -- npx playwright test ./tests/selected
+    - allurectl watch -- npx playwright test ./tests/selected
 ```
 
-### GitHub Actions
+In GitHub Actions
 
 ```yaml
       - name: Test with Playwright
@@ -67,5 +67,5 @@ tests:
         run: |
           allurectl job-run plan --job-run-id $ALLURE_JOB_RUN_ID --output-file testplan.json
           npx ts-node ./tools/allure-filter.ts
-          allurectl watch --project-id 4 -- npx playwright test ./tests/selected
+          allurectl watch -- npx playwright test ./tests/selected
 ```
