@@ -12,7 +12,7 @@
 1. Download source code
 
 ```bash
-wget https://github.com/eftech-open/allurectl-playwright-filter/blob/master/README.md -O <your_repository_path>
+wget https://github.com/eftech-open/allurectl-playwright-filter/blob/master/src/allure-filter.ts -O <your_repository_path>
 ```
 
 2. Add script steps to your CI-file
