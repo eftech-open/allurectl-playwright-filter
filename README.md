@@ -12,7 +12,7 @@
 1. Download source code
 
 ```bash
-wget https://github.com/eftech-open/allurectl-playwright-filter/blob/master/README.md -O <repository_path>
+wget https://github.com/eftech-open/allurectl-playwright-filter/blob/master/src/allure-filter.ts -O <your_repository_path>
 ```
 
 2. Add script steps to your CI-file
@@ -44,7 +44,7 @@ Also, launch options can be set via arguments, for instance:
 
 ## 🤖 Continuous Integration
 
-Using GitLab CI
+GitLab CI
 
 ```yaml
 stages:
@@ -58,7 +58,7 @@ tests:
     - allurectl watch -- npx playwright test ./tests/selected
 ```
 
-Using GitHub Actions
+GitHub Actions
 
 ```yaml
   - name: Test with Playwright
