@@ -11,6 +11,12 @@ interface AllureTestPlan {
     tests: Array<AllureTestObject>;
 }
 
+/**
+ * Recursively searches for all files in a directory matching the RegExp and store path to each file in array
+ * @param directory - directory where test files located
+ * @param filter - RexExp rule
+ * @param fileList - list of filtered test files
+ */
 const findTestFiles = (directory: string, filter: string | RegExp, fileList: Array<string> = []) => {
     const matcher = typeof filter === 'string' ? new RegExp(filter) : filter;
     const files = fs.readdirSync(directory);
@@ -29,11 +35,19 @@ const findTestFiles = (directory: string, filter: string | RegExp, fileList: Arr
     return fileList;
 };
 
+/**
+ * Reads a testplan.json file
+ * @param file - path to testplan.json
+ */
 const readTestPlan = (file: string) => {
     const filePath = path.resolve(file);
     return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as AllureTestPlan;
 };
 
+/**
+ * Picks tests IDs from testplan.json
+ * @param testPlan - object of AllureTestPlan
+ */
 const pickTestIds = (testPlan: AllureTestPlan) => {
     const testsList: Array<number> = [];
     if (testPlan.tests.length) {
@@ -44,9 +58,15 @@ const pickTestIds = (testPlan: AllureTestPlan) => {
     return testsList;
 };
 
+/**
+ * Reads every file from path and if it contains an allure.id from testplan, then copies it to the specified directory
+ * @param file - path to file
+ * @param testsList - list of testplan`s IDs
+ * @param target - target directory to copy matched files
+ */
 const filterTestsByIds = (file: string, testsList: Array<number>, target: string) => {
     if (!fs.existsSync(target)) {
-        fs.mkdirSync(target, { recursive: true });
+        fs.mkdirSync(target, {recursive: true});
     }
     fs.readFile(file, (error, data) => {
         if (error) throw new Error();
